@@ -1,12 +1,30 @@
 export default function ProductCard({ product }) {
+  let shouldShowDescription = false;
+  let currentImageIndex = 0;
+  let itemsInCart = 0;
+
+  const handleAddToCartClick = () => {
+    itemsInCart++;
+    alert(`you added ${itemsInCart}`);
+  };
   return (
     <>
-      <img src={product.imageUrl} alt={product.name} />
+      <div id="image-carousel">
+        <img
+          src={product.imageUrls[currentImageIndex] + " " + product.name}
+          alt={product.name}
+        />
+        <button>Next</button>
+        <button>previous</button>
+      </div>
+
       <h3>{product.name}</h3>
-      <p>{product.description}</p>
+      {shouldShowDescription && <p>{product.description}</p>}
+      <button>Show Description</button>
       <div className="price">${product.price}</div>
 
-      <button>Add to Cart</button>
+      <button onClick={handleAddToCartClick}>Add to Cart</button>
+
       {!product.isInStock && "The product is out of stock"}
     </>
   );

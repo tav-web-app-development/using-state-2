@@ -1,36 +1,19 @@
-# Components Assignment 2
+# Using State Assignment
 
-We will continue working on the E-commerce store. You will need to do:
+## Fix the image carousel in `productCard`
 
-1. Create and checkout to a branch called `develop`
-2. Pass the `user` object as a prop to the `NavBar` component
+1. Have the product image change when the next or previous button are clicked
+1. Disable the next and previous button when there are no more images left to be shown
 
-   1. The `NavBar` component should say "Welcome `User.Name`" only if the `user` prop was passed down. Otherwise, it should say "login".
-   2. The `NavBar` should say "`user.ItemsInCart` in your cart" If the user has more than 0 items in his shopping cart. Else it should not say anything
+## Fix the Show Description Button
 
-3. The `ProductCard` should receive as a prop the `products` variable
+1. Fix the show description button to toggle between showing product details or hiding them when clicked
+1. When showing product details, the button should say "Hide Description". When details are hidden, it should say "Show Description"
 
-   1. It should accept the following props: `name`, `description`, `price`, `imageUrl`, and `isInStock`
-   2. It should display the product title, description, image URL, and price that were passed to it as props
-   3. It should use the logical AND operator (&&) to say "Unavailable" only when `isInStock` is set to false
-   4. Add some style to it using the `style` prop. One idea would be to add a border around the card
+## Fix Add To Cart Button
 
-4. The `ProductCardContainer` should accept a list of products as a prop
+1. When clicking on the add to cart button, increment the product counter and fire an alert that will say "You have {productCount} added to you cart "
 
-   1. It should generate a list of `ProductCard` components using the JS `map` method
+## Fix Product Card Container
 
-5. Create a component called `StyleWrapper` that wraps children passed into it with a div
-
-   1. The div should set the following CSS styles using the style prop:
-
-   ```css
-   background-color: #f8f9fa; /* Light gray background */
-   padding: 20px; /* Padding around the content */
-   text-align: center; /* Center-align the text */
-   border-top: 1px solid #dee2e6; /* Optional border at the top */
-   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
-   ```
-
-   2. In the `App` component, use `StyleWrapper` by passing the `Footer` component as a child to the `StyleWrapper` component
-
-6. Push your code to GitHub open a Pull Request comparing `develop` to `master`, and submit a link to the PR in Omnivox
+1. Fix the small error in ProductCardContainer.jsx
