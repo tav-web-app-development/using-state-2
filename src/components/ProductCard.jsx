@@ -1,5 +1,4 @@
 export default function ProductCard({ product }) {
-  let shouldShowDescription = false;
   let currentImageIndex = 0;
   let itemsInCart = 0;
 
@@ -19,7 +18,7 @@ export default function ProductCard({ product }) {
       </div>
 
       <h3>{product.name}</h3>
-      {shouldShowDescription && <p>{product.description}</p>}
+      <p>{product.description}</p>
       <button>Show Description</button>
       <div className="price">${product.price}</div>
 
