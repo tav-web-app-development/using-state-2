@@ -14,7 +14,7 @@ export default function ProductCard({ product }) {
           alt={product.name}
         />
         <button>Next</button>
-        <button>previous</button>
+        <button>Previous</button>
       </div>
 
       <h3>{product.name}</h3>

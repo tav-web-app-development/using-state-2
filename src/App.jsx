@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <main className="store">
-      <NavBar />
+      <NavBar user={user} />
       <ProductCardContainer products={products} />
       <Footer />
     </main>
