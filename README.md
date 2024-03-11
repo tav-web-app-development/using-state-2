@@ -1,19 +1,9 @@
-# Using State Assignment
+# Using State Assignment 2
 
-## Fix the image carousel in `productCard`
+1. Have the `NavBar` show how many items are in the cart
 
-1. Have the product image change when the next or previous button are clicked
-1. Disable the next and previous button when there are no more images left to be shown
+   1. It should be updated when the "add to cart" button is clicked
+   1. Remove from the UI information about how many times this item was ordered
 
-## Fix the Show Description Button
-
-1. Fix the show description button to toggle between showing product details or hiding them when clicked
-1. When showing product details, the button should say "Hide Description". When details are hidden, it should say "Show Description"
-
-## Fix Add To Cart Button
-
-1. When clicking on the add to cart button, increment the product counter and fire an alert that will say "You have {productCount} added to you cart "
-
-## Fix Product Card Container
-
-1. Fix the small error in ProductCardContainer.jsx
+1. Add to the `NavBar` a checkout button
+   1. When clicking on it have a form appear with the following fields: `first name`, `last name`
