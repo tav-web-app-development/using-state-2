@@ -21,8 +21,6 @@ export default function ProductCard({ product }) {
           onClick={() => setCurrentImageIndex(currentImageIndex + 1)}
         >
           Next
-          {currentImageIndex}
-          {product.imageUrls.length - 1}
         </button>
         <button
           disabled={currentImageIndex <= 0}
