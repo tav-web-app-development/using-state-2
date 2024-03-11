@@ -1,10 +1,13 @@
+import { useState } from "react";
+
 export default function ProductCard({ product }) {
-  let currentImageIndex = 0;
-  let itemsInCart = 0;
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showDescription, setShowDescription] = useState(false);
+  const [itemsInCart, setItemsInCart] = useState(0);
 
   const handleAddToCartClick = () => {
-    itemsInCart++;
-    alert(`you added ${itemsInCart}`);
+    setItemsInCart(itemsInCart + 1);
+    alert(`you added ${itemsInCart + 1}`);
   };
   return (
     <>
@@ -13,13 +16,27 @@ export default function ProductCard({ product }) {
           src={product.imageUrls[currentImageIndex] + " " + product.name}
           alt={product.name}
         />
-        <button>Next</button>
-        <button>Previous</button>
+        <button
+          disabled={currentImageIndex >= product.imageUrls.Length - 1}
+          onClick={() => setCurrentImageIndex(currentImageIndex + 1)}
+        >
+          Next
+          {currentImageIndex}
+          {product.imageUrls.Length - 1}
+        </button>
+        <button
+          disabled={currentImageIndex <= 0}
+          onClick={() => setCurrentImageIndex(currentImageIndex - 1)}
+        >
+          Previous
+        </button>
       </div>
 
       <h3>{product.name}</h3>
       <p>{product.description}</p>
-      <button>Show Description</button>
+      <button onClick={() => setShowDescription(!showDescription)}>
+        {showDescription ? "Hide " : "Show"} Description
+      </button>
       <div className="price">${product.price}</div>
 
       <button onClick={handleAddToCartClick}>Add to Cart</button>
