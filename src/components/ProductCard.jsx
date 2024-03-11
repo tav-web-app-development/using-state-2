@@ -17,12 +17,12 @@ export default function ProductCard({ product }) {
           alt={product.name}
         />
         <button
-          disabled={currentImageIndex >= product.imageUrls.Length - 1}
+          disabled={currentImageIndex >= product.imageUrls.length - 1}
           onClick={() => setCurrentImageIndex(currentImageIndex + 1)}
         >
           Next
           {currentImageIndex}
-          {product.imageUrls.Length - 1}
+          {product.imageUrls.length - 1}
         </button>
         <button
           disabled={currentImageIndex <= 0}
