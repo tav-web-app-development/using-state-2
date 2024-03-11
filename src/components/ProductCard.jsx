@@ -24,6 +24,7 @@ export default function ProductCard({ product }) {
 
       <button onClick={handleAddToCartClick}>Add to Cart</button>
 
+      <div>You order this item {itemsInCart} times</div>
       {!product.isInStock && "The product is out of stock"}
     </>
   );
