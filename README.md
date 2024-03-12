@@ -1,5 +1,6 @@
 # Using State Assignment 2
 
+1. Create a new branch called "develop" (`git checkout -b 'develop'`)
 1. Have the `NavBar` show how many items are in the cart
 
    1. It should be updated when the "add to cart" button is clicked
@@ -13,3 +14,5 @@
    1. The address added to the billing address form should still be in the form if an address was entered in to the billing form and then the checkbox was checked and then unchecked
    1. There should be one submit button for both forms
    1. Trim (remove) whitespace before and after all the inputs when the submit button is clicked
+
+1. Commit the 'develop' branch, push it to the remote repo and then open a Pull Request to `master`
